@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+.venv-1/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large / generated data (kept out of version control; regenerate via main.py)
+data/processed/*
+!data/processed/.gitkeep
+
+# Models are typically large binary artifacts; uncomment to exclude from git
+# models/*.pkl
+
+# Streamlit
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
