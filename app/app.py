@@ -67,11 +67,54 @@ st.markdown(
         .block-container { padding-top: 2.2rem; padding-bottom: 3rem; max-width: 1200px; }
 
         /* Inputs */
-        div[data-baseweb="select"] > div, .stNumberInput input, .stTextInput input {
-            background-color: var(--surface-2) !important;
+        div[data-baseweb="select"],
+        div[data-baseweb="select"] > div,
+        div[data-baseweb="select"] > div > div,
+        .stNumberInput input,
+        .stTextInput input {
+            background: var(--surface-2) !important;
             border: 1px solid var(--border) !important;
             color: var(--text) !important;
             border-radius: 8px !important;
+        }
+        div[data-testid="stSelectbox"] [data-baseweb="select"],
+        div[data-testid="stSelectbox"] [data-baseweb="select"] > div,
+        div[data-testid="stSelectbox"] [data-baseweb="select"] > div > div,
+        div[data-testid="stNumberInput"] button {
+            background: var(--surface-2) !important;
+            color: var(--text) !important;
+        }
+        .react-aria-ComboBox [role="group"],
+        .react-aria-ComboBox input,
+        .react-aria-ComboBox button,
+        div[data-testid="stNumberInputContainer"],
+        div[data-testid="stNumberInputContainer"] > div,
+        div[data-testid="stNumberInputContainer"] button {
+            background: var(--surface-2) !important;
+            color: var(--text) !important;
+        }
+        .react-aria-ComboBox [role="group"] {
+            border: 1px solid var(--border) !important;
+            border-radius: 8px !important;
+        }
+        div[data-testid="stNumberInput"] button:hover {
+            background: var(--border) !important;
+        }
+        div[data-baseweb="select"] *,
+        div[data-baseweb="select"] [aria-selected="true"],
+        div[data-baseweb="popover"],
+        div[data-baseweb="popover"] > div,
+        div[data-baseweb="menu"],
+        div[data-baseweb="menu"] > div,
+        div[role="listbox"],
+        div[role="option"] {
+            background-color: var(--surface-2) !important;
+            color: var(--text) !important;
+        }
+        div[role="option"]:hover,
+        div[role="option"][aria-selected="true"] {
+            background-color: var(--border) !important;
+            color: var(--text) !important;
         }
         /* Slider track + thumb only (not the value labels) */
         div[data-testid="stSlider"] div[data-baseweb="slider"] > div > div {
@@ -101,6 +144,10 @@ st.markdown(
             border-radius: 8px;
             font-weight: 600;
             border: 1px solid var(--border);
+        }
+        .stButton > button:not([kind="primary"]) {
+            background: var(--surface-2) !important;
+            color: var(--text) !important;
         }
         .stButton > button[kind="primary"] {
             background: linear-gradient(90deg, var(--accent), var(--accent-2));
